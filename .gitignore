@@ -1,1 +1,2 @@
-**/**/__pycache__
+WebApp/**/__pycache__/*
+WebApp/frontend/node_modules/*
