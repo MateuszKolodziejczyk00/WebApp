@@ -1,19 +1,30 @@
-import React, { Component } from "react";
+import React from 'react'
 import { render } from "react-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+import Header from "./Components/Header/Header"
+import Home from './Components/Home/Home';
+import Menu from './Components/Menu/Menu';
+import Reservation from './Components/Reservation/Reservation';
 
-  render() {
-    return (
-      <div>
-        <h1>Dupa</h1>
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path = "/" exact component={Home} />
+        <Route path = "Menu" component={Menu} />
+        <Route path = "Reservation" component={Reservation} />
+      </Routes>
+    </Router>
+  )
 }
+
+export default App
 
 const appDiv = document.getElementById("app");
 render(<App />, appDiv);
