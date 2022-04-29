@@ -14,12 +14,14 @@ import Reservation from './Components/Reservation/Reservation';
 const App = () => {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path = "/" exact component={Home} />
-        <Route path = "Menu" component={Menu} />
-        <Route path = "Reservation" component={Reservation} />
-      </Routes>
+      <div class = "App">
+        <Header />
+        <Routes>
+          <Route path = "/" exact component={Home} />
+          <Route path = "Menu" component={Menu} />
+          <Route path = "Reservation" component={Reservation} />
+        </Routes>
+      </div>
     </Router>
   )
 }

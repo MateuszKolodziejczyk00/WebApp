@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 const MenuElement = ({name, linkTo}) => {
   return (
-    <div>
-        <Link to = {linkTo}A>
-            <h3>{name}</h3>
+    <div class = "HeaderMenuElement">
+        <Link to = {linkTo}>
+            <h2>{name}</h2>
         </Link>
     </div>
   )

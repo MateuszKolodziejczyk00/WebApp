@@ -1,0 +1,68 @@
+:root {
+  --color-main: #f68657;
+  --color-text: #d6d1d1;
+  --color-dark: #f5f6f7;
+  --color-gray: #999;
+  --color-bg: #1f2124;
+  --color-lighter: #292a2c;
+  --color-white: #2e3235;
+  --color-border:#252629;
+
+  --header-height: 100px;
+}
+
+
+.App {
+    background-color: var(--color-dark);
+    color: var(--color-text)
+}
+
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: var(--header-height);
+    gap: 2em;
+}
+
+.RestaurantName {
+    height: var(--header-height);
+    min-width: 40%;
+    min-width: 50%;
+    margin-right: 0%;
+}
+
+.HeaderMenu {
+    display: flex;
+    min-width: 30%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: var(--header-height);
+    margin-left: 40%;
+}
+
+.HeaderMenuElement {
+    height: var(--header-height);
+    min-width: 25%;
+    text-align: center;
+    margin: 5%;
+    margin-top: 10%;
+}
+
+.HeaderMenuElement a:link {
+    color: beige;
+}
+
+.HeaderMenuElement a:visited {
+    color: beige;
+}
+
+.HeaderMenuElement a:hover {
+    color: blanchedalmond;
+}
+
+.HeaderMenuElement a:active {
+    color: beige;
+}
