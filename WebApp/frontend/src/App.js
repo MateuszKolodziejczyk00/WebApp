@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from "react-dom";
+import ReactDOM from 'react-dom/client';
 import {
   BrowserRouter as Router,
   Routes,
@@ -8,18 +8,18 @@ import {
 
 import Header from "./Components/Header/Header"
 import Home from './Components/Home/Home';
-import Menu from './Components/Menu/Menu';
+import MenuPage from './Components/Menu/MenuPage';
 import Reservation from './Components/Reservation/Reservation';
 
 const App = () => {
   return (
     <Router>
-      <div class = "App">
+      <div className = "App">
         <Header />
         <Routes>
-          <Route path = "/" exact component={Home} />
-          <Route path = "Menu" component={Menu} />
-          <Route path = "Reservation" component={Reservation} />
+          <Route path="/" exact element = { <Home /> } />
+          <Route path="/Menu" element = { <MenuPage /> } />
+          <Route path="/Reservation" element = { <Reservation />} />
         </Routes>
       </div>
     </Router>
@@ -29,4 +29,4 @@ const App = () => {
 export default App
 
 const appDiv = document.getElementById("app");
-render(<App />, appDiv);
+ReactDOM.createRoot(appDiv).render(<App />)

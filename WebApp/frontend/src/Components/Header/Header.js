@@ -3,7 +3,7 @@ import HeaderMenu from './HeaderMenu'
 
 const Header = () => {
   return (
-    <div class = "Header">
+    <div className = "Header">
         <h1>Restaurant</h1>
         <HeaderMenu />
     </div>
