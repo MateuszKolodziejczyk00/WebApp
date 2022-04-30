@@ -17,36 +17,52 @@
     color: var(--color-text)
 }
 
+/* Header */
+
 .Header {
+    background-color: red;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
     height: var(--header-height);
     gap: 2em;
 }
 
-.RestaurantName {
+.RestaurantLogo {
+    background-color: blue;
     height: var(--header-height);
     min-width: 40%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.RestaurantName {
+    background-color: purple;
+    height: var(--header-height);
+    text-align: center;
     min-width: 50%;
-    margin-right: 0%;
+    max-width: 50%;
+    margin: 5%
 }
 
 .HeaderMenu {
+    background-color: green;
     display: flex;
-    min-width: 30%;
+    min-width: 40%;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     height: var(--header-height);
-    margin-left: 40%;
 }
 
 .HeaderMenuElement {
+    background-color: yellow;
     height: var(--header-height);
-    min-width: 25%;
     text-align: center;
+    min-width: 25%;
+    max-width: 25%;
     margin: 5%;
     margin-top: 10%;
 }
@@ -65,4 +81,50 @@
 
 .HeaderMenuElement a:active {
     color: beige;
+}
+
+/*Menu */
+
+.MenuPage {
+
+}
+
+.MenuTitle {
+
+}
+
+.MenuContent {
+
+}
+
+.DishesTypePanel {
+
+}
+
+.DishesTypeName {
+
+}
+
+.DishesList {
+
+}
+
+.Dish {
+
+}
+
+.DishName {
+
+}
+
+.DishPrice {
+
+}
+
+.DishAttributesList {
+
+}
+
+.DishAttribute {
+
 }

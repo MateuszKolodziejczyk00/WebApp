@@ -3,7 +3,7 @@ import Dish from './Dish'
 
 const DishesList = ({dishes}) => {
   return (
-    <div>
+    <div className  = "DishesList">
         {
             dishes.map((dish) => 
             (

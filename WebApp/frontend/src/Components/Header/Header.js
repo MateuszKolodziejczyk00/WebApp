@@ -4,7 +4,11 @@ import HeaderMenu from './HeaderMenu'
 const Header = () => {
   return (
     <div className = "Header">
-        <h1>Restaurant</h1>
+        <div className = "RestaurantLogo">
+          <div className = "RestaurantName">
+            <h1>Restaurant</h1>
+          </div>
+        </div>
         <HeaderMenu />
     </div>
   )

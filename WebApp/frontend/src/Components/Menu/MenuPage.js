@@ -17,14 +17,16 @@ const MenuPage = () => {
   }
 
   return (
-    <div>
-      <h1>Menu</h1>
-      {
-        dishTypes.map((dishType) => 
-        (
-          <DishesTypePanel dishTypeName = {dishType.name} dishesList = {dishType.dishes} />
-        ))
-      }
+    <div className = "MenuPage">
+      <h1 className = "MenuTitle">Menu</h1>
+      <div>
+        {
+          dishTypes.map((dishType) => 
+          (
+            <DishesTypePanel dishTypeName = {dishType.name} dishesList = {dishType.dishes} />
+          ))
+        }
+      </div>
     </div>
   )
 }
