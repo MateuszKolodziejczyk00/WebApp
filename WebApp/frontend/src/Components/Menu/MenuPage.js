@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffectyy } from 'react'
 import DishesTypePanel from './DishesTypePanel'
+import Cart from '../Cart/Cart'
 
 const MenuPage = () => {
   let [dishTypes, setDishTypes] = useState([])
@@ -19,6 +20,7 @@ const MenuPage = () => {
   return (
     <div className = "MenuPage">
       <h1 className = "MenuTitle">Menu</h1>
+      <Cart />
       <div>
         {
           dishTypes.map((dishType) => 
