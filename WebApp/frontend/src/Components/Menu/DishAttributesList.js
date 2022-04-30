@@ -4,9 +4,9 @@ const DishAttributesList = ({attributesList}) => {
   return (
     <div className = "DishAttributesList">
     {
-        attributesList.map((attribute) =>
+        attributesList.map((attribute, index) =>
         (
-          <h5 className = "DishAttribute">{ attribute.name }</h5>
+          <h5 className = "DishAttribute" key = { index }>{ attribute.name }</h5>
         ))
     }
     </div>

@@ -5,9 +5,9 @@ const DishesList = ({dishes}) => {
   return (
     <div className  = "DishesList">
         {
-            dishes.map((dish) => 
+            dishes.map((dish, index) => 
             (
-                <Dish dish = { dish } />
+                <Dish key = {index} dish = { dish } />
             ))
         }
     </div>
