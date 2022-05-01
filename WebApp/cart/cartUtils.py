@@ -1,3 +1,6 @@
+import pickle
+
+
 class UserCart:
     keyName = 'Cart'
 
@@ -9,10 +12,21 @@ def getSession(request):
     return request.session
 
 
+def loadUserCart(session):
+    cart = pickle.loads(bytes.fromhex(session.get(UserCart.keyName)))
+    return cart
+
+
+def saveUserCart(session, cart):
+    session[UserCart.keyName] = pickle.dumps(cart).hex()
+    session.modified = True
+
+
 def getUserCart(session):
     if UserCart.keyName not in session:
-        session[UserCart.keyName] = {}
+        saveUserCart(session, {})
     
+    return loadUserCart(session)
     return session.get(UserCart.keyName)
 
 
@@ -20,10 +34,9 @@ def addElementToCart(request, ID):
     session = getSession(request)
     cart = getUserCart(session)
 
-    prevElementsCount = cart.get(ID, 0)
-    cart[ID] = prevElementsCount
+    cart[ID] = cart[ID] + 1 if ID in cart else 1
 
-    session.modified = True
+    saveUserCart(session, cart)
 
 
 def removeElementFromCart(request, ID):
@@ -32,7 +45,7 @@ def removeElementFromCart(request, ID):
 
     del cart[ID]
 
-    session.modified = True
+    saveUserCart(session, cart)
 
 
 def getElementsInCart(request):

@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from .cartUtils import addElementToCart, getElementsInCart
 
 from menu.models import Dish
@@ -9,8 +10,7 @@ def removeDishFromCart(request, dishID):
     removeDishFromCart(request, dishID)
 
 def getDishesInCartInfo(request):
-    #dishIdToNum = getElementsInCart(request)
-    dishIdToNum = {1: 4}
+    dishIdToNum = getElementsInCart(request)
 
     keys = dishIdToNum.keys()
 

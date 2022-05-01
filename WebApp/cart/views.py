@@ -15,7 +15,7 @@ def GetDishes(request):
 
 @api_view(['PUT'])
 def AddDish(request, dishID):
-    addDishToCart(request, dishID)
+    addDishToCart(request, 1)
     return Response()
 
 
