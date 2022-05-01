@@ -13,6 +13,13 @@ const MenuPage = () =>
   let [dishTypesFilter, setDishTypesFilter] = useState(new Set())
   let [dishAttributesFilter, setDishAttributesFilter] = useState(new Set())
 
+  let [forceUpdateValue, setForceUpdateValue ] = useState(0)
+
+  let forceUpdate = () =>
+  {
+      return setForceUpdateValue(forceUpdateValue + 1)
+  }
+
   useEffect(() =>
   {
     getDishesPerType()
@@ -57,7 +64,7 @@ const MenuPage = () =>
   let switchTypeFilter = (dishType) =>
   {
     getTypeFilter(dishType) ?  dishTypesFilter.delete(dishType) : dishTypesFilter.add(dishType)
-    setDishTypesFilter(dishTypesFilter)
+    forceUpdate()
   }
 
   let getAttributeFilter = (attribute) =>
@@ -68,7 +75,19 @@ const MenuPage = () =>
   let switchAttributeFilter = (attribute) =>
   {
     getAttributeFilter(attribute) ?  dishAttributesFilter.delete(attribute) : dishAttributesFilter.add(attribute)
-    setDishAttributesFilter(dishAttributesFilter)
+    forceUpdate()
+  }
+
+  let shouldShowDishTypePanel = (dishTypeName) =>
+  {
+    if(dishTypesFilter.size == 0)
+    {
+      return true
+    }
+    else
+    {
+      return dishTypesFilter.has(dishTypeName)
+    }
   }
 
   return (
@@ -81,7 +100,9 @@ const MenuPage = () =>
         {
           dishesPerType.map((dishType, index) => 
           (
-            <DishesTypePanel key = {index} dishTypeName = {dishType.name} dishesList = {dishType.dishes} onCartUpdatedCallback = { getDishesInCart } />
+            shouldShowDishTypePanel(dishType.name)
+              ? <DishesTypePanel key = {index} dishTypeName = {dishType.name} dishesList = {dishType.dishes} dishAttributesFilterSet = { dishAttributesFilter } onCartUpdatedCallback = { getDishesInCart } />
+              : null
           ))
         }
       </div>
