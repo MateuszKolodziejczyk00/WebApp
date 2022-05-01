@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import DishInCart from './DishInCart'
 
 const cart = () => {
   let [dishesInCart, setDishesInCart] = useState([])
@@ -12,13 +13,17 @@ const cart = () => {
   {
     let response = await fetch('/cart/getDishes')
     let data = await response.json()
-    console.log(data)
     setDishesInCart(data)
   }
 
   return (
     <div>
-      <h1>CART</h1>
+      {
+        dishesInCart.map((dish, index) =>
+        (
+          <DishInCart key = { index } dish = { dish } />
+        ))
+      }
     </div>
   )
 }
