@@ -1,13 +1,17 @@
 import React from 'react'
 
-const AddToCartButton = ({ DishID }) => {
+const AddToCartButton = ({ DishID, onCartUpdatedCallback }) => {
 
   let AddToCart = async () =>
   {
-    fetch('/cart/addDish/1/',
+    fetch('/cart/addDish/${DishID}/',
     {
       method: "PUT",
       headers: { 'Content-Type': 'application/json' }
+    })
+    .then((data) => 
+    {
+      onCartUpdatedCallback()
     })
   }
 
