@@ -15,3 +15,15 @@ class DishTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = DishType
         fields = ('name', 'dishes')
+
+
+class DishTypeNameSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DishType
+        fields = "__all__"
+
+
+class DishAttributeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DishAttribute
+        fields = "__all__"

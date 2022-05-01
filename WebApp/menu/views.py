@@ -1,12 +1,19 @@
-from http.client import HTTPResponse
-from django.shortcuts import render
-from rest_framework.views import APIView
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .utils import getAllDishes
+from .utils import getAllAttributes, getAllDishTypes, getAllDishes
 
 
-class DishesView(APIView):
+@api_view(['GET'])
+def GetAllDishes(request):
+    return Response(getAllDishes())
 
-    def get(self, request, format = None):
-        return Response(getAllDishes())
+
+@api_view(['GET'])
+def GetAllAttributes(request):
+    return Response(getAllAttributes())
+
+
+@api_view(['GET'])
+def GetAllDishTypes(request):
+    return Response(getAllDishTypes())
