@@ -8,63 +8,55 @@
   --color-white: #2e3235;
   --color-border:#252629;
 
-  --header-height: 100px;
+  --header-height: 10%;
 }
 
 
 .App {
-    background-color: var(--color-dark);
-    color: var(--color-text)
+    background-color: var(--color-white);
+    color: var(--color-text);
+    width: 100%;
 }
 
 /* Header */
 
 .Header {
-    background-color: red;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
     height: var(--header-height);
-    gap: 2em;
+    background-color: black;
+    border-color: beige;
+    border: 1%;
+    border-style: solid;
+    width: 100%;
 }
 
 .RestaurantLogo {
-    background-color: blue;
-    height: var(--header-height);
-    min-width: 40%;
+    min-width: 20%;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .RestaurantName {
-    background-color: purple;
-    height: var(--header-height);
     text-align: center;
-    min-width: 50%;
-    max-width: 50%;
     margin: 5%
 }
 
 .HeaderMenu {
-    background-color: green;
     display: flex;
-    min-width: 40%;
-    justify-content: center;
+    min-width: 50%;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    height: var(--header-height);
 }
 
 .HeaderMenuElement {
-    background-color: yellow;
-    height: var(--header-height);
     text-align: center;
     min-width: 25%;
     max-width: 25%;
-    margin: 5%;
-    margin-top: 10%;
 }
 
 .HeaderMenuElement a:link {
@@ -86,7 +78,15 @@
 /*Menu */
 
 .MenuPage {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 
+    text-align: center;
+    
+    justify-content: center;
+    
+    padding: 0%;
 }
 
 .MenuTitle {
@@ -98,7 +98,12 @@
 }
 
 .DishesTypePanel {
-
+    background-color: black;
+    border-color: beige;
+    border: 1%;
+    border-style: solid;
+    justify-content: center;
+    width: 800px;
 }
 
 .DishesTypeName {
@@ -106,11 +111,31 @@
 }
 
 .DishesList {
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .Dish {
+    display: flex;
+    flex-direction: row;
+    width: 360px;
+    margin: 20px;
+}
 
+.DishMain {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
+.DishHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
 }
 
 .DishName {
@@ -121,10 +146,50 @@
 
 }
 
-.DishAttributesList {
+.DishFooter {
+    width: 100%;
+}
 
+.DishAttributesList {
+    height: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .DishAttribute {
+    margin-right: 16px;
+}
 
+.Cart {
+    position: fixed;
+    top: 12%;
+    left: 79%;
+    display: flex;
+    background-color: black;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 20%;
+    border-color: beige;
+    border: 1%;
+    border-style: solid;
+}
+
+.DishInCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.DishInCartHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.DishInCartFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

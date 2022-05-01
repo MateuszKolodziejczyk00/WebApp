@@ -29,12 +29,16 @@ const DishInCart = ({ dish, onCartUpdatedCallback }) =>
   }
 
   return (
-    <div>
-      <h4>{ dish.name }</h4>
-      <h4>{ dish.num }</h4>
-      <h4>{ dish.price }</h4>
-      <button onClick={ onAddPressed } >+</button>
-      <button onClick={ onRemovePressed } >-</button>
+    <div className = "DishInCart">
+      <div className = "DishInCartHeader">
+        <h3>{ dish.num }</h3>
+        <h3>{ dish.name }</h3>
+        <h3>{ dish.price }</h3>
+      </div>
+      <div className = "DishInCartFooter">
+        <button onClick={ onAddPressed } >+</button>
+        <button onClick={ onRemovePressed } >-</button>
+      </div>
     </div>
   )
 }
