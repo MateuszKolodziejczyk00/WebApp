@@ -30,7 +30,7 @@ const MenuPage = () =>
   return (
     <div className = "MenuPage">
       <h1 className = "MenuTitle">Menu</h1>
-      <Cart dishesInCart = { dishesInCart } />
+      <Cart dishesInCart = { dishesInCart } onCartUpdatedCallback = { getDishesInCart } />
       <div>
         {
           dishTypes.map((dishType, index) => 

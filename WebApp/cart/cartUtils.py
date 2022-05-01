@@ -43,9 +43,13 @@ def removeElementFromCart(request, ID):
     session = getSession(request)
     cart = getUserCart(session)
 
-    del cart[ID]
+    if ID in cart:
+        cart[ID] = cart[ID] - 1
 
-    saveUserCart(session, cart)
+        if cart[ID] == 0:
+            del cart[ID]
+
+        saveUserCart(session, cart)
 
 
 def getElementsInCart(request):

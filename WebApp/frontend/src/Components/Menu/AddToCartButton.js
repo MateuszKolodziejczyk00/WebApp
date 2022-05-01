@@ -4,7 +4,7 @@ const AddToCartButton = ({ DishID, onCartUpdatedCallback }) => {
 
   let AddToCart = async () =>
   {
-    fetch('/cart/addDish/${DishID}/',
+    fetch(`/cart/addDish/${DishID}/`,
     {
       method: "PUT",
       headers: { 'Content-Type': 'application/json' }
