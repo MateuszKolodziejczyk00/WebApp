@@ -1,7 +1,8 @@
 from django.db import models
 
 class DishType(models.Model):
-    name = models.TextField(null = False, blank = False)
+    name = models.TextField(null = False, blank = False, max_length = 30)
+    #displayName = models.TextField(null = False, blank = False, max_length = 30)
 
     def __str__(self):
         return self.name

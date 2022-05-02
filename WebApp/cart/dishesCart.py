@@ -20,10 +20,13 @@ def getDishesInCartInfo(request):
         dish = Dish.objects.get(id = dishId)
         if dish:
             dishInfo = {}
+
+            dishNum = dishIdToNum[dish.id]
+
             dishInfo['id'] = dish.id
             dishInfo['name'] = dish.name
-            dishInfo['price'] = dish.price
-            dishInfo['num'] = dishIdToNum[dish.id]
+            dishInfo['price'] = dishNum * dish.price
+            dishInfo['num'] = dishNum
 
             cartInfo.append(dishInfo)
 

@@ -92,26 +92,28 @@ const MenuPage = () =>
 
   return (
     <div>
-      <div className = "Cart">
-        <Cart dishesInCart = { dishesInCart } onCartUpdatedCallback = { getDishesInCart } />
-      </div>
       <div className = "MenuPage">
-        <div>
-          <h2>Rodzaje dań</h2>
-          <DishFilter filterElements = { dishTypes } getFilterValue = { getTypeFilter } switchFilterValue = { switchTypeFilter } />
-          <h2>Dodatkowe filtry</h2>
-          <DishFilter filterElements = { dishAttributes } getFilterValue = { getAttributeFilter } switchFilterValue = { switchAttributeFilter } />
+        <div className = "Cart">
+          <Cart dishesInCart = { dishesInCart } onCartUpdatedCallback = { getDishesInCart } />
         </div>
-        <h1 className = "MenuTitle">Menu</h1>
-        <div>
-          {
-            dishesPerType.map((dishType, index) => 
-            (
-              shouldShowDishTypePanel(dishType.name)
-                ? <DishesTypePanel key = {index} dishTypeName = {dishType.name} dishesList = {dishType.dishes} dishAttributesFilterSet = { dishAttributesFilter } onCartUpdatedCallback = { getDishesInCart } />
-                : null
-            ))
-          }
+        <div className = "MenuContent">
+          <div>
+            <h2>Rodzaje dań</h2>
+            <DishFilter filterElements = { dishTypes } getFilterValue = { getTypeFilter } switchFilterValue = { switchTypeFilter } />
+            <h2>Dodatkowe filtry</h2>
+            <DishFilter filterElements = { dishAttributes } getFilterValue = { getAttributeFilter } switchFilterValue = { switchAttributeFilter } />
+          </div>
+          <h1 className = "MenuTitle">Menu</h1>
+          <div>
+            {
+              dishesPerType.map((dishType, index) => 
+              (
+                shouldShowDishTypePanel(dishType.name)
+                  ? <DishesTypePanel key = {index} dishTypeName = {dishType.name} dishesList = {dishType.dishes} dishAttributesFilterSet = { dishAttributesFilter } onCartUpdatedCallback = { getDishesInCart } />
+                  : null
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

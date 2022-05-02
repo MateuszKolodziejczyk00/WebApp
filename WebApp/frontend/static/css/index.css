@@ -9,6 +9,12 @@
   --color-border:#252629;
 
   --header-height: 10%;
+
+  --menu-width: 1300px;
+  --dish-width: 600px;
+
+  --cart-width: 22%;
+  --cart-offset_y: 78%;
 }
 
 
@@ -18,9 +24,17 @@
     width: 100%;
 }
 
+.AppContent {
+    margin-top: 5%;
+}
+
 /* Header */
 
 .Header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -78,15 +92,11 @@
 /*Menu */
 
 .MenuPage {
+    top: 302px;
+    padding: 0%;
     align-items: center;
     display: flex;
     flex-direction: column;
-
-    text-align: center;
-    
-    justify-content: center;
-    
-    padding: 0%;
 }
 
 .MenuTitle {
@@ -94,7 +104,15 @@
 }
 
 .MenuContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 
+    text-align: center;
+    
+    justify-content: center;
+    margin-right: 300px;
+    width: var(--menu-width);
 }
 
 .DishesTypePanel {
@@ -103,7 +121,7 @@
     border: 1%;
     border-style: solid;
     justify-content: center;
-    width: 800px;
+    width: var(--menu-width);
 }
 
 .DishesTypeName {
@@ -120,7 +138,7 @@
 .Dish {
     display: flex;
     flex-direction: row;
-    width: 360px;
+    width: var(--dish-width);
     margin: 20px;
 }
 
@@ -164,13 +182,13 @@
 
 .Cart {
     position: fixed;
-    top: 12%;
-    left: 79%;
+    top: 11%;
+    left: var(--cart-offset_y);
     display: flex;
     background-color: black;
     justify-content: flex-start;
     flex-direction: column;
-    width: 20%;
+    width: var(--cart-width);
     border-color: beige;
     border: 1%;
     border-style: solid;
