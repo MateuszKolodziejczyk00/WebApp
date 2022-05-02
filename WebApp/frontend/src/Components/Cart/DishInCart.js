@@ -1,4 +1,6 @@
 import React from 'react'
+import { ReactComponent as Plus } from '../../Assets/plus.svg'
+import { ReactComponent as Minus } from '../../Assets/minus.svg'
 
 const DishInCart = ({ dish, onCartUpdatedCallback }) =>
 {
@@ -36,8 +38,12 @@ const DishInCart = ({ dish, onCartUpdatedCallback }) =>
         <h3>{ dish.price }</h3>
       </div>
       <div className = "DishInCartFooter">
-        <button onClick={ onAddPressed } >+</button>
-        <button onClick={ onRemovePressed } >-</button>
+        <button onClick={ onAddPressed } >
+          <Plus />
+        </button>
+        <button onClick={ onRemovePressed } >
+          <Minus />
+        </button>
       </div>
     </div>
   )

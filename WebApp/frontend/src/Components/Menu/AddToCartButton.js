@@ -1,4 +1,5 @@
 import React from 'react'
+import { ReactComponent as Add } from '../../Assets/add.svg'
 
 const AddToCartButton = ({ DishID, onCartUpdatedCallback }) => {
 
@@ -17,7 +18,9 @@ const AddToCartButton = ({ DishID, onCartUpdatedCallback }) => {
 
   return (
     <div>
-      <button onClick={AddToCart}>Add To Cart</button>
+      <button onClick={AddToCart}>
+        <Add />
+      </button>
     </div>
   )
 }
