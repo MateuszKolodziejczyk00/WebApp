@@ -2,7 +2,8 @@ from django.db import models
 
 class DishType(models.Model):
     name = models.TextField(null = False, blank = False, max_length = 30)
-    #displayName = models.TextField(null = False, blank = False, max_length = 30)
+    displayName = models.TextField(null = False, blank = False, max_length = 30)
+    image = models.TextField(null = False, blank = True)
 
     def __str__(self):
         return self.name

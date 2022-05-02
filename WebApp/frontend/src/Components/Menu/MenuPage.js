@@ -89,6 +89,7 @@ const MenuPage = () =>
       return dishTypesFilter.has(dishTypeName)
     }
   }
+console.log(dishesPerType)
 
   return (
     <div>
@@ -109,7 +110,7 @@ const MenuPage = () =>
               dishesPerType.map((dishType, index) => 
               (
                 shouldShowDishTypePanel(dishType.name)
-                  ? <DishesTypePanel key = {index} dishTypeName = {dishType.name} dishesList = {dishType.dishes} dishAttributesFilterSet = { dishAttributesFilter } onCartUpdatedCallback = { getDishesInCart } />
+                  ? <DishesTypePanel key = {index} dishTypeName = {dishType.displayName} imageSource = {dishType.image} dishesList = {dishType.dishes} dishAttributesFilterSet = { dishAttributesFilter } onCartUpdatedCallback = { getDishesInCart } />
                   : null
               ))
             }
