@@ -4,6 +4,7 @@ import DishInCart from './DishInCart'
 const cart = ({ dishesInCart, onCartUpdatedCallback }) => {
   return (
     <div>
+      <h1>Koszyk</h1>
       {
         dishesInCart.map((dish, index) =>
         (

@@ -35,7 +35,7 @@ const DishInCart = ({ dish, onCartUpdatedCallback }) =>
       <div className = "DishInCartHeader">
         <h3>{ dish.num }</h3>
         <h3>{ dish.name }</h3>
-        <h3>{ dish.price }</h3>
+        <h3>{ dish.price } zł</h3>
       </div>
       <div className = "DishInCartFooter">
         <button onClick={ onAddPressed } >

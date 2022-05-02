@@ -7,8 +7,8 @@ const Dish = ({ dish, onCartUpdatedCallback }) => {
     <div className = "Dish">
         <div className = "DishMain">
           <div className = "DishHeader">
-            <h4 className = "DishName">{dish.name}</h4>
-            <h4 className = "DishPrice">{dish.price}</h4>
+            <h2 className = "DishName">{dish.name}</h2>
+            <h2 className = "DishPrice">{dish.price}</h2>
           </div>
           <DishAttributesList attributesList = {dish.attributes} />
         </div>

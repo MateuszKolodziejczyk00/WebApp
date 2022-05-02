@@ -6,7 +6,7 @@ const DishAttributesList = ({attributesList}) => {
     {
         attributesList.map((attribute, index) =>
         (
-          <h5 className = "DishAttribute" key = { index }>{ attribute.name }</h5>
+          <h4 className = "DishAttribute" key = { index }>{ attribute.name }</h4>
         ))
     }
     </div>
