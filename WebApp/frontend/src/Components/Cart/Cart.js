@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import DishesInCartList from './DishesInCartList'
-import DishInCart from './DishInCart'
-import PaymentButton from './PaymentButton'
 
 const cart = ({ dishesInCart, onCartUpdatedCallback, allowModifying }) => {
 

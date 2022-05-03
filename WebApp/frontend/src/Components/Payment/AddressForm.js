@@ -2,12 +2,12 @@ import React from 'react'
 import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message'
 
-const AddressForm = () =>{
+const AddressForm = ({ setAddressData }) =>{
     const {register, handleSubmit, formState: {errors} } = useForm();
 
     const onSubmit = (data) =>
     {
-
+        setAddressData(data)
     }
 
     return (
