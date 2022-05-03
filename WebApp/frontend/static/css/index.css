@@ -22,6 +22,7 @@
     background-color: var(--color-white);
     color: var(--color-text);
     width: 100%;
+    overflow-x: hidden;
 }
 
 .AppContent {
@@ -87,6 +88,70 @@
 .HeaderMenuElement a:active {
     color: beige;
 }
+
+/*Home */
+
+.HomeVideoWrapper {
+
+}
+
+.HomeVideo {
+    width: 184.046%;
+    height: 100%;
+    max-height: none;
+    position: fixed;
+    left: -42.0228%;
+    top: 0px;
+    pointer-events: none;
+    overflow-x: hidden;
+}
+
+.HomeInfoContainer {
+    position: absolute;
+    top: 1080px;
+    left: 360px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.HomeInfoPanel {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 30px;
+
+    border-color: beige;
+    border: 1px;
+    border-style: solid;
+}
+
+.HomeInfoPanelImage {
+    height: 360px;
+    width: 480px;
+}
+
+.HomeInfoPanelMain {
+    width: 720px;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.HomeInfoPanelTitle {
+
+}
+
+.HomeInfoPanelContent {
+
+}
+
 
 /*Menu */
 
