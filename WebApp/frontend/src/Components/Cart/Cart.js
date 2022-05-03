@@ -18,7 +18,7 @@ const cart = ({ dishesInCart, onCartUpdatedCallback }) => {
     <div>
       <h1>Koszyk</h1>
       <h2>Razem: { getFullPrice() }zł</h2>
-      { dishesInCart.length > 0 ? <PaymentButton /> : null }
+      { dishesInCart.length > 0 ? <PaymentButton price = { getFullPrice().toString() } /> : null }
       {
         dishesInCart.map((dish, index) =>
         (

@@ -4,7 +4,7 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .dishesCart import addDishToCart, getDishesInCartInfo, removeDishFromCart
+from .dishesCart import addDishToCart, clearDishesInCart, getDishesInCartInfo, removeDishFromCart
 
 
 @api_view(['GET'])
@@ -22,4 +22,10 @@ def AddDish(request, dishID):
 @api_view(['PUT'])
 def RemoveDish(request, dishID):
     removeDishFromCart(request, dishID)
+    return Response()
+
+
+@api_view(['POST'])
+def OnPaymentApproved(request):
+    clearDishesInCart(request)
     return Response()

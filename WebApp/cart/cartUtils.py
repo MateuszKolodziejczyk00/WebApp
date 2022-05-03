@@ -52,6 +52,14 @@ def removeElementFromCart(request, ID):
         saveUserCart(session, cart)
 
 
+def clearCart(request):
+    session = getSession(request)
+
+    cart = {}
+
+    saveUserCart(session, cart)
+
+
 def getElementsInCart(request):
     session = getSession(request)
     cart = getUserCart(session)

@@ -1,5 +1,5 @@
 from asyncio.windows_events import NULL
-from .cartUtils import addElementToCart, getElementsInCart, removeElementFromCart
+from .cartUtils import addElementToCart, clearCart, getElementsInCart, removeElementFromCart
 
 from menu.models import Dish
 
@@ -8,6 +8,9 @@ def addDishToCart(request, dishID):
 
 def removeDishFromCart(request, dishID):
     removeElementFromCart(request, dishID)
+
+def clearDishesInCart(request):
+    clearCart(request)
 
 def getDishesInCartInfo(request):
     dishIdToNum = getElementsInCart(request)
