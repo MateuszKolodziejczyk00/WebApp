@@ -19,7 +19,7 @@
 
 
 .App {
-    background-color: var(--color-white);
+    background-color: #1f2124;
     color: var(--color-text);
     width: 100%;
     overflow-x: hidden;
@@ -106,11 +106,19 @@
     overflow-x: hidden;
 }
 
-.HomeInfoContainer {
+.HomePageContent {
     position: absolute;
-    top: 1080px;
-    left: 360px;
+    top: 100%;
+    left: 20%;
 
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.HomeInfoContainer {
     display: flex;
     flex-direction: column;
 
@@ -135,7 +143,7 @@
 }
 
 .HomeInfoPanelMain {
-    width: 720px;
+    width: 672px;
     display: flex;
     flex-direction: column;
     
@@ -145,13 +153,59 @@
 }
 
 .HomeInfoPanelTitle {
-
+    color: beige;
 }
 
 .HomeInfoPanelContent {
 
 }
 
+.OpeningHoursPanel {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+    width: 1152px;
+
+    margin-bottom: 50px;
+
+    border-color: beige;
+    border: 1px;
+    border-style: solid;
+}
+
+.OpeningHoursTitle {
+    color: beige;
+}
+
+.OpeningHour {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Days {
+    display: flex;
+    text-align: left;
+
+    margin-left: 20%;
+
+    color: beige;
+}
+
+.Hours {
+    display: flex;
+    text-align: right;
+
+    margin-right: 20%;
+}
 
 /*Menu */
 
