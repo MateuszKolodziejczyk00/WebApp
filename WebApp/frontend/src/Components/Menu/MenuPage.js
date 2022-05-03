@@ -89,7 +89,6 @@ const MenuPage = () =>
       return dishTypesFilter.has(dishTypeName)
     }
   }
-console.log(dishesPerType)
 
   return (
     <div>

@@ -22,10 +22,11 @@ def getDishesInCartInfo(request):
             dishInfo = {}
 
             dishNum = dishIdToNum[dish.id]
+            price = dishNum * dish.price
 
             dishInfo['id'] = dish.id
             dishInfo['name'] = dish.name
-            dishInfo['price'] = dishNum * dish.price
+            dishInfo['price'] = price
             dishInfo['num'] = dishNum
 
             cartInfo.append(dishInfo)
