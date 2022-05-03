@@ -23,15 +23,17 @@ const DishFilter = ({ filterElements, getFilterValue, switchFilterValue }) =>
 
     return (
       <div>
-          <RadioGroup row >
+          <RadioGroup row className = "FilterGroup">
           {
             filterElements.map((element, index) =>
             (
                 <FormControlLabel 
+                    className = "FilterLabel"
                     key = { index }
                     value = "true"
                     control = {
                         <Radio
+                            className = "FilterRadio"
                             checked = { isChecked(element.name) }
                             onClick = {(e) => { onSwitch(element.name, e) } }
                         />

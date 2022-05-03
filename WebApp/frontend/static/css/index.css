@@ -293,6 +293,24 @@
     width: var(--menu-width);
 }
 
+.FilterGroup {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+
+.FilterLabel {
+    
+}
+
+.FilterRadio {
+    
+}
+
 .DishesTypePanel {
     background-color: black;
     border-color: beige;
@@ -389,6 +407,26 @@
     text-align: center;
 }
 
+.CartPaymentButton {
+    color: beige
+}
+
+.CartPaymentButton a:link {
+    color: beige;
+}
+
+.CartPaymentButton a:visited {
+    color: beige;
+}
+
+.CartPaymentButton a:hover {
+    color: blanchedalmond;
+}
+
+.CartPaymentButton a:active {
+    color: beige;
+}
+
 .DishInCart {
     display: flex;
     flex-direction: column;
@@ -410,4 +448,77 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+/* Payment */
+
+.PaymentPage {
+
+}
+
+.PaymentPageContent {
+    margin-top: 100px;
+    margin-bottom: 1200px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.AddressForm {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    width: 1152px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    background-color: black;
+
+    border-color: beige;
+    border: 1%;
+    border-style: solid;
+}
+
+.AddressFormRow {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: center;
+
+    width: 720px;
+}
+
+.AddressFormName {
+    display: flex;
+}
+
+.AddressFormElement {
+    display: flex;
+}
+
+.AddressFormError {
+    display: flex;
+
+    text-align: end;
+}
+
+.AddressFormSubmit {
+    display: flex;
+    width: 100%;
+
+    margin-bottom: 30px;
+
+    align-self: center;
 }

@@ -94,7 +94,7 @@ const MenuPage = () =>
     <div>
       <div className = "MenuPage">
         <div className = "Cart">
-          <Cart dishesInCart = { dishesInCart } onCartUpdatedCallback = { getDishesInCart } />
+          <Cart dishesInCart = { dishesInCart } onCartUpdatedCallback = { getDishesInCart } allowModifying = { true } />
         </div>
         <div className = "MenuContent">
           <div>

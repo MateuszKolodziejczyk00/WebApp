@@ -9,6 +9,7 @@ import {
 import Header from "./Components/Header/Header"
 import HomePage from './Components/Home/HomePage';
 import MenuPage from './Components/Menu/MenuPage';
+import PaymentPage from './Components/Payment/PaymentPage';
 import Reservation from './Components/Reservation/Reservation';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/" exact element = { <HomePage /> } />
             <Route path="/Menu" element = { <MenuPage /> } />
             <Route path="/Reservation" element = { <Reservation />} />
+            <Route path="/Payment" element = { <PaymentPage />} />
           </Routes>
         </div>
         <Header />

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import DishesInCartList from './DishesInCartList'
 import DishInCart from './DishInCart'
 import PaymentButton from './PaymentButton'
 
-const cart = ({ dishesInCart, onCartUpdatedCallback }) => {
+const cart = ({ dishesInCart, onCartUpdatedCallback, allowModifying }) => {
 
   let getFullPrice = () =>
   {
@@ -18,13 +20,12 @@ const cart = ({ dishesInCart, onCartUpdatedCallback }) => {
     <div>
       <h1>Koszyk</h1>
       <h2>Razem: { getFullPrice() }zł</h2>
-      { dishesInCart.length > 0 ? <PaymentButton price = { getFullPrice().toString() } /> : null }
-      {
-        dishesInCart.map((dish, index) =>
-        (
-          <DishInCart key = { index } dish = { dish } onCartUpdatedCallback = { onCartUpdatedCallback } />
-        ))
-      }
+      <div className = "CartPaymentButton">
+        <Link to = '/Payment'>
+            <h2>Przejdź do płatności</h2>
+        </Link>
+      </div>
+      <DishesInCartList dishesInCart={ dishesInCart } onCartUpdatedCallback = { onCartUpdatedCallback } allowModifying = { allowModifying } />
     </div>
   )
 }

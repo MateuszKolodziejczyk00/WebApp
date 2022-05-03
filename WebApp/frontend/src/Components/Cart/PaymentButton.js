@@ -45,7 +45,6 @@ const PaymentButton = ({price}) =>
 
     return (
         <div>
-            <h1>{price}</h1>
             <div ref={paypal}></div>
         </div>
     )
