@@ -12,13 +12,18 @@ const AddressForm = () =>{
 
     return (
         <div className = "AddressForm">
+            <h1 className = "AddressFormTitle">Adres</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <div className = "AddressFormRow">
                     <h3 className = "AddressFormName">E-Mail</h3>
 
                     <input className = "AddressFormElement" type = "text" placeholder = 'Email' { ...register("email",{
-                        required: "Nieprawidłowy e-mail"
+                        required: "Nieprawidłowy e-mail",
+                        pattern: {
+                            value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/,
+                            message: "Nieprawidłowy e-mail"
+                        }
                         }) } />
 
                 </div>
@@ -37,7 +42,7 @@ const AddressForm = () =>{
                     <input className = "AddressFormElement" type = "text" placeholder = 'Kod pocztowy' { ...register("postalCode", {
                         required: "Nieprawidłowy kod pocztowy",
                         pattern: {
-                            value: /^[0-9]{3}$/i,
+                            value: /^[0-9]{2}-[0-9]{3}$/i,
                             message: "Nieprawidłowy kod pocztowy"
                         }})} />
                 </div>
@@ -61,7 +66,6 @@ const AddressForm = () =>{
                 <div className = "AddressFormRow">
                     <h3 className = "AddressFormName">Numer mieszkania</h3>
                     <input className = "AddressFormElement" type = "number" placeholder = 'Numer mieszkania' { ...register("apartmentNumber", {
-                        required: "Nieprawidłowy numer mieszkania"
                         }) } />
                 </div>
 

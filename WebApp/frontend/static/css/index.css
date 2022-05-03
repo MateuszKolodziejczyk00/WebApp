@@ -488,6 +488,12 @@
     border-style: solid;
 }
 
+.AddressFormTitle {
+    text-align: center;
+
+    color: beige;
+}
+
 .AddressFormRow {
     display: flex;
     flex-direction: row;

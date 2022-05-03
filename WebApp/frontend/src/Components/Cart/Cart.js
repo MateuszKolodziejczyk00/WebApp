@@ -21,7 +21,7 @@ const cart = ({ dishesInCart, onCartUpdatedCallback, allowModifying }) => {
       <h1>Koszyk</h1>
       <h2>Razem: { getFullPrice() }zł</h2>
       <div className = "CartPaymentButton">
-        <Link to = '/Payment'>
+        <Link to = '/PaymentForm'>
             <h2>Przejdź do płatności</h2>
         </Link>
       </div>

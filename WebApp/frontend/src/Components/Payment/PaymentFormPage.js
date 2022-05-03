@@ -1,7 +1,7 @@
 import React from 'react'
 import AddressForm from './AddressForm'
 
-const PaymentPage = () => {
+const PaymentFormPage = () => {
     return (
         <div className = "PaymentPage">
             <div className = "PaymentPageContent">
@@ -11,4 +11,4 @@ const PaymentPage = () => {
     )
 }
 
-export default PaymentPage
+export default PaymentFormPage
