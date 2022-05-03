@@ -210,6 +210,63 @@
     margin-right: 20%;
 }
 
+.ContactPanel {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+    width: 1152px;
+
+    margin-bottom: 50px;
+
+    border-color: beige;
+    border: 1px;
+    border-style: solid;
+}
+
+.ContactHeader {
+    color: beige;
+}
+
+.ContactRow {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.ContactRowKey {
+    display: flex;
+    text-align: left;
+
+    margin-left: 20%;
+
+    color: beige;
+}
+
+.ContactRowValue {
+    display: flex;
+    text-align: right;
+
+    margin-right: 20%;
+}
+
+.AddressHeader {
+    color: beige;
+}
+
+.AddressContent {
+
+}
+
 /*Menu */
 
 .MenuPage {

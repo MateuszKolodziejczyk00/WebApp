@@ -8,7 +8,6 @@ const HeaderMenu = () => {
         <MenuElement name={"O nas"} linkTo={"/"} />
         <MenuElement name={"Menu"} linkTo={"/Menu"} />
         <MenuElement name={"Rezerwacja"} linkTo={"/Reservation"} />
-        <MenuElement name={"Kontakt"} linkTo={"/Contact"} />
     </div>
   )
 }
