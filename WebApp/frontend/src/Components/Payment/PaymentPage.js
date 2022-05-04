@@ -14,7 +14,7 @@ const PaymentFormPage = () => {
     return (
         <div className = "PaymentPage">
             <div className = "PaymentPageContent">
-                { addressData ? <Payment /> : <AddressForm setAddressData={setAddressData} /> }
+                { addressData ? <Payment addressData = { addressData } /> : <AddressForm setAddressData={setAddressData} /> }
             </div>
         </div>
     )

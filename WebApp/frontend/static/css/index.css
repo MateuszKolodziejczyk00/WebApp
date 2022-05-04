@@ -528,3 +528,40 @@
 
     align-self: center;
 }
+
+.PaymentPanel {
+    text-align: center;
+
+    width: 1152px;
+
+    margin-top: 80px;
+
+    background-color: black;
+
+    border-color: beige;
+    border: 1%;
+    border-style: solid;
+}
+
+.PaymentTitle {
+    color: beige;
+}
+
+.PaymentAddressRow {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+
+    border-top: 1px solid beige;
+}
+
+.PaymentAddressKey {
+    text-align: left;
+}
+
+.PaymentAddressValue {
+    text-align: right;
+}

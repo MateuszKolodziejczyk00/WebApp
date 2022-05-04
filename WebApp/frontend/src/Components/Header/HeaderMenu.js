@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import MenuElement from './MenuElement'
 
 const HeaderMenu = () => {
   return (
     <div className = "HeaderMenu">
-        <MenuElement name={"O nas"} linkTo={"/"} />
+        <MenuElement name={"O Nas"} linkTo={"/"} />
         <MenuElement name={"Menu"} linkTo={"/Menu"} />
         <MenuElement name={"Rezerwacja"} linkTo={"/Reservation"} />
     </div>
