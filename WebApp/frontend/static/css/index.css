@@ -1,3 +1,4 @@
+
 :root {
   --color-main: #f68657;
   --color-text: #d6d1d1;
@@ -564,4 +565,22 @@
 
 .PaymentAddressValue {
     text-align: right;
+}
+
+.ReservationPageContent {
+    margin-top: 100px;
+    margin-bottom: 1200px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.ReservationTimePicker {
+    
+    
+    color: beige;
+    background-color: white;
 }

@@ -10,7 +10,7 @@ import Header from "./Components/Header/Header"
 import HomePage from './Components/Home/HomePage';
 import MenuPage from './Components/Menu/MenuPage';
 import PaymentPage from './Components/Payment/PaymentPage';
-import Reservation from './Components/Reservation/Reservation';
+import ReservationPage from './Components/Reservation/ReservationPage';
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
           <Routes>
             <Route path="/" exact element = { <HomePage /> } />
             <Route path="/Menu" element = { <MenuPage /> } />
-            <Route path="/Reservation" element = { <Reservation />} />
+            <Route path="/Reservation" element = { <ReservationPage />} />
             <Route path="/PaymentForm" element = { <PaymentPage />} />
           </Routes>
         </div>
