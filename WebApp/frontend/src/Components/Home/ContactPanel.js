@@ -23,7 +23,7 @@ const ContactPanel = () => {
             ContactRow("Telefon", "123123123")
         }
         <h2 className = "AddressHeader">Adres</h2>
-        <h2 className = "AddressContent">Warszawa ul. Malinowa 7</h2>
+        <h2 className = "AddressContent">Warszawa ul. Marszałkowska 107</h2>
     </div>
   )
 }

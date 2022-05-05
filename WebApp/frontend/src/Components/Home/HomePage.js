@@ -2,6 +2,7 @@ import React from 'react'
 import ContactPanel from './ContactPanel'
 import HomeInfoPanel from './HomeInfoPanel'
 import OpeningHoursPanel from './OpeningHoursPanel'
+import RestaurantMap from './Map'
 
 const HomePage = () => {
 
@@ -28,7 +29,7 @@ const HomePage = () => {
           <HomeInfoPanel title = {"Historia"} content = {historyContent} image = {"https://cdn.vox-cdn.com/thumbor/BYxJY5FkGwbB37heWnlSDVVw8pc=/0x0:6000x4000/1200x800/filters:focal(2520x1520:3480x2480)/cdn.vox-cdn.com/uploads/chorus_image/image/68775471/Gary_He.0.jpg"} />
         </div>
         <OpeningHoursPanel />
-        <ContactPanel />
+        <RestaurantMap />
       </div>
     </div>
   )
