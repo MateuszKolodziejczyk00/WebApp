@@ -14,7 +14,25 @@ const ReservationPage = () => {
       //setAddressData(data)
   }
 
+  let getMinTime = () =>
+  {
+    if(selectedDate == null)
+    {
+      return '9:00'
+    }
 
+    return selectedDate.getDay() == 6 ? '12:00' : '9:00'
+  }
+
+  let getMaxTime = () =>
+  {
+    if(selectedDate == null)
+    {
+      return '21:00'
+    }
+
+    return selectedDate.getDay() == 6 ? '21:00' : '22:00'
+  }
 
   return (
     <div className = "ReservationPageContent">
@@ -56,6 +74,8 @@ const ReservationPage = () => {
             selected={field.value}
             disableClock={true}
             maxDetail = "hour"
+            minTime={getMinTime()}
+            maxTime={getMaxTime()}
             />
          )}
         />
