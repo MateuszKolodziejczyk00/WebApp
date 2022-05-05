@@ -468,7 +468,7 @@
     align-items: center;
 }
 
-.AddressForm {
+.Form {
     display: flex;
     flex-direction: column;
 
@@ -489,13 +489,13 @@
     border-style: solid;
 }
 
-.AddressFormTitle {
+.FormTitle {
     text-align: center;
 
     color: beige;
 }
 
-.AddressFormRow {
+.FormRow {
     display: flex;
     flex-direction: row;
 
@@ -507,21 +507,31 @@
     width: 720px;
 }
 
-.AddressFormName {
+.FormName {
     display: flex;
 }
 
-.AddressFormElement {
+.FormElement {
     display: flex;
 }
 
-.AddressFormError {
+.FormElementDate {
+    display: flex;
+    margin-left: 505px;
+}
+
+.FormElementTime {
+    display: flex;
+    background-color: white;
+}
+
+.FormError {
     display: flex;
 
     text-align: end;
 }
 
-.AddressFormSubmit {
+.FormSubmit {
     display: flex;
     width: 100%;
 
@@ -576,11 +586,4 @@
 
     justify-content: center;
     align-items: center;
-}
-
-.ReservationTimePicker {
-    
-    
-    color: beige;
-    background-color: white;
 }
