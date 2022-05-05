@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
-const PaymentButton = ({price}) =>
+const PaymentButton = ({price, onApproved}) =>
 {
     let createOrderDelegate = (data, actions) =>
     {
-        console.log(price)
         return actions.order.create({
             purchase_units: [{
                 amount: {
@@ -27,7 +26,11 @@ const PaymentButton = ({price}) =>
                 fetch('cart/onPaymentApproved', request)
                 .then((response) =>
                 {
-                    alert("Transations completed by " + details.payer.name.given_name)
+                    alert("Transakcja wykonana przez " + details.payer.name.given_name)
+                })
+                .then(() =>
+                {
+                    onApproved();
                 })
             })
     }
@@ -38,7 +41,9 @@ const PaymentButton = ({price}) =>
     {
         window.paypal.Buttons({
             createOrder: createOrderDelegate,
-            onApprove: onApproveDelegate
+            onApprove: onApproveDelegate,
+            onCancel: () => {alert("Transakcja przerwana")},
+            onError: (err) => {alert(err)}
         }).render(paypal.current)
     }, [])
 

@@ -3,9 +3,10 @@ import AddressForm from './AddressForm'
 
 import Payment from './Payment'
 
-const PaymentFormPage = () => {
+const PaymentFormPage = ({history}) => {
     let [addressData, setAddressData] = useState(null)
 
+    console.log(history)
     useEffect(() =>
     {
         setAddressData(null)
@@ -14,7 +15,7 @@ const PaymentFormPage = () => {
     return (
         <div className = "PaymentPage">
             <div className = "PaymentPageContent">
-                { addressData ? <Payment addressData = { addressData } /> : <AddressForm setAddressData={setAddressData} /> }
+                { addressData ? <Payment addressData = { addressData } history = {history} /> : <AddressForm setAddressData={setAddressData} /> }
             </div>
         </div>
     )

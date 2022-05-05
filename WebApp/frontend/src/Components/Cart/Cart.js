@@ -30,7 +30,7 @@ const cart = ({ dishesInCart, onCartUpdatedCallback, allowModifying }) => {
       <h1>Koszyk</h1>
       <h2>Razem: { getFullPrice() }zł</h2>
       {dishesInCart.length > 0 ? paymentButton() : null}
-      <DishesInCartList dishesInCart={ dishesInCart } onCartUpdatedCallback = { onCartUpdatedCallback } allowModifying = { allowModifying } />
+      <DishesInCartList dishesInCart={ dishesInCart } onCartUpdatedCallback = { onCartUpdatedCallback } allowModifying = { true } />
     </div>
   )
 }

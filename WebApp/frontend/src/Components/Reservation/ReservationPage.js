@@ -11,7 +11,7 @@ const ReservationPage = () => {
 
   const onSubmit = (data) =>
   {
-      //setAddressData(data)
+    alert("Rezerwacja została wykonana")
   }
 
   let getMinTime = () =>
