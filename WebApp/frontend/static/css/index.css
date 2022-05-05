@@ -468,7 +468,7 @@
 
 .PaymentPageContent {
     margin-top: 100px;
-    margin-bottom: 1200px;
+    height: 850px;
 
     display: flex;
     flex-direction: column;

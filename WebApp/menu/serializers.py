@@ -14,7 +14,7 @@ class DishTypeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DishType
-        fields = ('displayName', 'image', 'dishes')
+        fields = ('name', 'displayName', 'image', 'dishes')
 
 
 class DishTypeNameSerializer(serializers.ModelSerializer):

@@ -17,11 +17,11 @@ const DishesList = ({dishes, dishAttributesFilterSet, onCartUpdatedCallback}) =>
       {
         if(dishAttributesFilterSet.has(dishAttributes[i].name))
         {
-          return true
+          return true;
         }
       }
 
-      return false
+      return false;
     }
   }
 

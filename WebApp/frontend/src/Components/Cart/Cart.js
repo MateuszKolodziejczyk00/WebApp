@@ -14,15 +14,22 @@ const cart = ({ dishesInCart, onCartUpdatedCallback, allowModifying }) => {
     return fullPrice
   }
 
-  return (
-    <div>
-      <h1>Koszyk</h1>
-      <h2>Razem: { getFullPrice() }zł</h2>
+  let paymentButton = () =>
+  {
+    return (
       <div className = "CartPaymentButton">
         <Link to = '/PaymentForm'>
             <h2>Przejdź do płatności</h2>
         </Link>
       </div>
+    )
+  }
+
+  return (
+    <div>
+      <h1>Koszyk</h1>
+      <h2>Razem: { getFullPrice() }zł</h2>
+      {dishesInCart.length > 0 ? paymentButton() : null}
       <DishesInCartList dishesInCart={ dishesInCart } onCartUpdatedCallback = { onCartUpdatedCallback } allowModifying = { allowModifying } />
     </div>
   )
