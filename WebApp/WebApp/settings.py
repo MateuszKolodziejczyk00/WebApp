@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'menu.apps.MenuConfig',
     'frontend.apps.FrontendConfig',
     'cart.apps.CartConfig',
+    'reservations.apps.ReservationsConfig',
     'rest_framework'
 ]
 

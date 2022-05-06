@@ -4,13 +4,15 @@ const PaymentButton = ({price, onApproved}) =>
 {
     let createOrderDelegate = (data, actions) =>
     {
-        return actions.order.create({
+        let order = actions.order.create({
             purchase_units: [{
                 amount: {
                     value: price
                 }
             }]
         })
+
+        return order;
     }
 
     let onApproveDelegate = async (data, actions) =>

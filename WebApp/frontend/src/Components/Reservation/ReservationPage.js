@@ -11,7 +11,17 @@ const ReservationPage = () => {
 
   const onSubmit = (data) =>
   {
-    alert("Rezerwacja została wykonana")
+    console.log(data)
+    const request = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    };
+    fetch("/reservations/makeReservation", request)
+    .then((response) =>
+    {
+      alert("Rezerwacja została wykonana")
+    });
   }
 
   let getMinTime = () =>
@@ -41,6 +51,14 @@ const ReservationPage = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
 
       <div className = "FormRow">
+          <h3 className = "FormName">Nr Telefonu</h3>
+
+          <input className = "FormElement" type = "text" placeholder = 'Imię i Nazwisko' { ...register("name",{
+              required: "Nieprawidłowe imię i nazwisko",
+              }) } />
+      </div>
+
+      <div className = "FormRow">
         <h3 className = "FormName">Data</h3>
 
         <Controller
@@ -53,7 +71,7 @@ const ReservationPage = () => {
             placeholderText='Select date'
             onChange={(date) => {field.onChange(date); setSelectedDate(date) } }
             selected={field.value}
-            filterDate={date => date.getDay() != 0 }
+            filterDate={date => date.getDay() != 0 && date > Date.now() }
             />
          )}
         />
@@ -69,11 +87,10 @@ const ReservationPage = () => {
         render={({ field }) => (
           <TimePicker className = "FormElementTime"
             popperProps={{strategy: 'fixed'}}
-            placeholderText='Select date'
-            onChange={(date) => field.onChange(date)}
+            placeholderText='Select time'
+            onChange={(time) => { field.onChange(time); }}
             selected={field.value}
             disableClock={true}
-            maxDetail = "hour"
             minTime={getMinTime()}
             maxTime={getMaxTime()}
             />
@@ -121,6 +138,12 @@ const ReservationPage = () => {
               }
               }) } />
       </div>
+
+      <ErrorMessage className = "FormError"
+          errors={errors}
+          name="name"
+          render={({message}) => <h4>{message}</h4>}
+      />
 
       <ErrorMessage className = "FormError"
           errors={errors}

@@ -3,10 +3,9 @@ import AddressForm from './AddressForm'
 
 import Payment from './Payment'
 
-const PaymentFormPage = ({history}) => {
+const PaymentFormPage = () => {
     let [addressData, setAddressData] = useState(null)
 
-    console.log(history)
     useEffect(() =>
     {
         setAddressData(null)
