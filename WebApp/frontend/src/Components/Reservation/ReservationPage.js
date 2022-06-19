@@ -63,8 +63,9 @@ const ReservationPage = () => {
 
         <Controller
         control={control}
+        rules={{required: true}}
         name='date'
-        required = "Data jest wymagana"
+        defaultValue={new Date(Date.now() + 86400000)} // + 1 day
         render={({ field }) => (
           <DatePicker className = "FormElementDate"
             popperProps={{strategy: 'fixed'}}
@@ -82,6 +83,7 @@ const ReservationPage = () => {
 
         <Controller
         control={control}
+        rules={{required:true}}
         name='time'
         required = "czas jest wymagany"
         render={({ field }) => (

@@ -11,7 +11,7 @@ from .models import Reservation
 @api_view(['POST'])
 def MakeReservation(request):
     date = dt.parse(request.data['date'])
-    date = date.replace(day = date.day + 1) # some bug? day was always parsed as one-before
+    date = date.replace(day = date.day + 1) # bug? day was always parsed as one-before
     time = datetime.strptime(request.data['time'], '%H:%M')
     date = date.replace(hour = time.hour, minute = time.minute)
     

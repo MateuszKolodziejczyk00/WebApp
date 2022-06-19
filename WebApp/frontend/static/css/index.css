@@ -15,7 +15,7 @@
   --dish-width: 580px;
 
   --cart-width: 22%;
-  --cart-offset_y: 78%;
+  --cart-offset_y: 77%;
 }
 
 
@@ -35,7 +35,7 @@
 .Header {
     position: fixed;
     top: 0%;
-    left: 0%;
+    left: 8px;
 
     display: flex;
     justify-content: space-around;
@@ -46,7 +46,7 @@
     border-color: beige;
     border: 1%;
     border-style: solid;
-    width: 100%;
+    width: 99%;
 }
 
 .RestaurantLogo {
